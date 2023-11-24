@@ -37,7 +37,7 @@ class ResetPassword extends StatelessWidget {
                       hintText: 'ReType New Password',
                     ),
                     SizedBox(height: 24.h),
-                    MainButton(
+                    const MainButton(
                       type: ButtonType.primary,
                       text: 'Continue',
                     )

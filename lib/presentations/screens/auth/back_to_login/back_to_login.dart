@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:montra_ui/presentations/components/main_button.dart';
 import 'package:montra_ui/presentations/screens/auth/reset_password/reset_password.dart';
-import 'package:montra_ui/presentations/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
