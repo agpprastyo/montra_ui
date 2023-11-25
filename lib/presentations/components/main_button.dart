@@ -5,14 +5,39 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
-enum ButtonType { primary, secondary, tertiary }
+/// The type of button, determines its appearance and behavior.
+enum ButtonType {
+  /// Primary button with a solid background color.
+  primary,
 
+  /// Secondary button with a lighter background color.
+  secondary,
+
+  /// Tertiary button with a white background, an icon, and text.
+  tertiary,
+}
+
+/// A customizable button used in the main UI.
+///
+/// The [MainButton] widget allows customization of its appearance and behavior
+/// based on the specified [type]. It supports three types: [primary],
+/// [secondary], and [tertiary].
 class MainButton extends StatefulWidget {
+  /// The type of the button, determines its appearance and behavior.
   final ButtonType type;
+
+  /// The text displayed on the button.
   final String text;
+
+  /// Indicates whether the button is in a loading state.
   final bool isLoading;
+
+  /// The function called when the button is pressed.
   final Function()? onPressed;
 
+  /// Creates a [MainButton] instance.
+  ///
+  /// The [type], [isLoading], [text], and [onPressed] parameters are required.
   const MainButton({
     Key? key,
     required this.type,
@@ -34,11 +59,11 @@ class _MainButtonState extends State<MainButton> {
     Color circularColor = Colors.white;
     Widget? child;
 
+    // Set the button color and text based on the button type
     switch (widget.type) {
       case ButtonType.primary:
         buttonColor = AppColors.violetViolet100;
         buttonText = text;
-
         break;
       case ButtonType.secondary:
         buttonColor = AppColors.violetViolet20;
@@ -57,9 +82,7 @@ class _MainButtonState extends State<MainButton> {
               height: 24.h,
               width: 24.w,
             ),
-            // Replace with your desired icon
             SizedBox(width: 8.w),
-            // Adjust the spacing as needed
             Text(
               buttonText,
               style: const AppTextStyles()
@@ -85,13 +108,16 @@ class _MainButtonState extends State<MainButton> {
               borderRadius: BorderRadius.circular(16.r),
             ),
           ),
+          // Disable the button if it is in a loading state
           onPressed: widget.isLoading
               ? null
               : widget.onPressed, // Use the custom onPressed function
+          // Display a loading indicator if the button is in a loading state
           child: widget.isLoading
               ? CircularProgressIndicator(
                   color: circularColor,
                 )
+              // Display the button text or child widget
               : child ??
                   Text(buttonText,
                       style: const AppTextStyles().titleTitle3.copyWith(

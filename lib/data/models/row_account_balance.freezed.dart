@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RowAccountBalance {
+  int get id => throw _privateConstructorUsedError;
   String get svgPath => throw _privateConstructorUsedError;
   String get accountName => throw _privateConstructorUsedError;
   int get totalBalance => throw _privateConstructorUsedError;
@@ -31,7 +32,7 @@ abstract class $RowAccountBalanceCopyWith<$Res> {
           RowAccountBalance value, $Res Function(RowAccountBalance) then) =
       _$RowAccountBalanceCopyWithImpl<$Res, RowAccountBalance>;
   @useResult
-  $Res call({String svgPath, String accountName, int totalBalance});
+  $Res call({int id, String svgPath, String accountName, int totalBalance});
 }
 
 /// @nodoc
@@ -47,11 +48,16 @@ class _$RowAccountBalanceCopyWithImpl<$Res, $Val extends RowAccountBalance>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? svgPath = null,
     Object? accountName = null,
     Object? totalBalance = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       svgPath: null == svgPath
           ? _value.svgPath
           : svgPath // ignore: cast_nullable_to_non_nullable
@@ -76,7 +82,7 @@ abstract class _$$RowAccountBalanceImplCopyWith<$Res>
       __$$RowAccountBalanceImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String svgPath, String accountName, int totalBalance});
+  $Res call({int id, String svgPath, String accountName, int totalBalance});
 }
 
 /// @nodoc
@@ -90,11 +96,16 @@ class __$$RowAccountBalanceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? svgPath = null,
     Object? accountName = null,
     Object? totalBalance = null,
   }) {
     return _then(_$RowAccountBalanceImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       svgPath: null == svgPath
           ? _value.svgPath
           : svgPath // ignore: cast_nullable_to_non_nullable
@@ -115,10 +126,13 @@ class __$$RowAccountBalanceImplCopyWithImpl<$Res>
 
 class _$RowAccountBalanceImpl implements _RowAccountBalance {
   const _$RowAccountBalanceImpl(
-      {required this.svgPath,
+      {required this.id,
+      required this.svgPath,
       required this.accountName,
       required this.totalBalance});
 
+  @override
+  final int id;
   @override
   final String svgPath;
   @override
@@ -128,7 +142,7 @@ class _$RowAccountBalanceImpl implements _RowAccountBalance {
 
   @override
   String toString() {
-    return 'RowAccountBalance(svgPath: $svgPath, accountName: $accountName, totalBalance: $totalBalance)';
+    return 'RowAccountBalance(id: $id, svgPath: $svgPath, accountName: $accountName, totalBalance: $totalBalance)';
   }
 
   @override
@@ -136,6 +150,7 @@ class _$RowAccountBalanceImpl implements _RowAccountBalance {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RowAccountBalanceImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.svgPath, svgPath) || other.svgPath == svgPath) &&
             (identical(other.accountName, accountName) ||
                 other.accountName == accountName) &&
@@ -145,7 +160,7 @@ class _$RowAccountBalanceImpl implements _RowAccountBalance {
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, svgPath, accountName, totalBalance);
+      Object.hash(runtimeType, id, svgPath, accountName, totalBalance);
 
   @JsonKey(ignore: true)
   @override
@@ -157,10 +172,13 @@ class _$RowAccountBalanceImpl implements _RowAccountBalance {
 
 abstract class _RowAccountBalance implements RowAccountBalance {
   const factory _RowAccountBalance(
-      {required final String svgPath,
+      {required final int id,
+      required final String svgPath,
       required final String accountName,
       required final int totalBalance}) = _$RowAccountBalanceImpl;
 
+  @override
+  int get id;
   @override
   String get svgPath;
   @override

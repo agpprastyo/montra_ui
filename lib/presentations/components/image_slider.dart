@@ -6,18 +6,33 @@ import 'package:flutter_svg/svg.dart';
 import 'package:montra_ui/presentations/bloc/image_slider/image_slider_cubit.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
+/// A widget that displays an image slider with titles and descriptions.
+///
+/// This widget uses the [CarouselSlider] and [DotsIndicator] packages to create
+/// an image slider with pagination dots.
 class ImageSlider extends StatelessWidget {
+  /// List of image paths to be displayed in the slider.
   final List<String> imagePaths;
+
+  /// List of titles corresponding to each image.
   final List<String> title;
+
+  /// List of descriptions corresponding to each image.
   final List<String> description;
+
+  /// The [ImageSliderCubit] responsible for managing the state of the image slider.
   final ImageSliderCubit cubit;
 
-  const ImageSlider(
-      {super.key,
-      required this.imagePaths,
-      required this.title,
-      required this.cubit,
-      required this.description});
+  /// Creates an [ImageSlider] instance.
+  ///
+  /// The [imagePaths], [title], [description], and [cubit] parameters are required.
+  const ImageSlider({
+    Key? key,
+    required this.imagePaths,
+    required this.title,
+    required this.description,
+    required this.cubit,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +93,8 @@ class ImageSlider extends StatelessWidget {
             size: const Size.square(10.0),
             activeSize: const Size(20.0, 10.0),
             activeShape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5.0)),
+              borderRadius: BorderRadius.circular(5.0),
+            ),
           ),
         ),
       ],

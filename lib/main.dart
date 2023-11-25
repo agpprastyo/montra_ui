@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:montra_ui/presentations/screens/navigation/bottom_nav.dart';
 
 import 'presentations/bloc/bloc_observer.dart';
+import 'presentations/screens/profile/account_section/detail_account.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
               appBarTheme: const AppBarTheme(centerTitle: true),
               useMaterial3: true,
             ),
-            home: const BottomNav(),
+            home: const DetailAccount(),
           );
         });
   }

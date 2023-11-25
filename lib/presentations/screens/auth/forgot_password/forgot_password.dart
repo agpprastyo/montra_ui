@@ -6,8 +6,12 @@ import 'package:montra_ui/presentations/screens/auth/back_to_login/back_to_login
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
+/// A screen for handling the password recovery process.
+///
+/// Users can enter their email address to receive a link to reset their password.
 class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+  /// Creates a [ForgotPassword] instance.
+  const ForgotPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

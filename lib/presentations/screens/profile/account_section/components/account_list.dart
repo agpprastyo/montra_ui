@@ -20,10 +20,17 @@ class AccountList extends StatelessWidget {
               final account = accountList[index];
               return Column(
                 children: [
-                  RowAccountBalance(
-                    svgPath: account.svgPath,
-                    accountName: account.accountName,
-                    totalBalance: account.totalBalance,
+                  GestureDetector(
+                    onTap: () {
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //   builder: (BuildContext context) => const (),
+                      // ));
+                    },
+                    child: RowAccountBalance(
+                      svgPath: account.svgPath,
+                      accountName: account.accountName,
+                      totalBalance: account.totalBalance,
+                    ),
                   ),
                   if (index < accountList.length - 1)
                     const Divider(thickness: 0.6),
@@ -62,6 +69,7 @@ class RowAccountBalance extends StatelessWidget {
           LogoItem(
             color: const Color(0xFFF1F1FA),
             svgPath: svgPath,
+            containerPadding: 10,
             // svgColor: AppColors.violetViolet100,
           ),
           SizedBox(width: 8.w),

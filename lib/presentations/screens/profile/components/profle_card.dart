@@ -99,6 +99,8 @@ class AccountListItem extends StatelessWidget {
               color: color,
               svgPath: svgPath,
               svgColor: svgColor,
+              containerPadding: 10,
+              containerSize: 70,
             ),
           ),
           title: Text(

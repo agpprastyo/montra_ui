@@ -6,8 +6,10 @@ import 'package:montra_ui/presentations/screens/auth/reset_password/reset_passwo
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
+/// A screen displaying a confirmation message and providing a button to go back to the login screen.
 class BackToLogin extends StatelessWidget {
-  const BackToLogin({super.key});
+  /// Creates a [BackToLogin] instance.
+  const BackToLogin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

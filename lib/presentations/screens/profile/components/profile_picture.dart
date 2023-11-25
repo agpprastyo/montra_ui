@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:montra_ui/presentations/components/main_icon_button.dart';
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
@@ -52,22 +52,9 @@ class PictureProfile extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: EdgeInsets.only(right: 16.h),
-          child: InkWell(
-            splashColor: Colors.grey.withOpacity(0.1),
-            highlightColor: AppColors.violetViolet40,
-            customBorder: const CircleBorder(),
-            onTap: () {},
-            child: Padding(
-              padding: const EdgeInsets.all(6.0),
-              child: SvgPicture.asset(
-                'assets/Magicons/Outline/User Interface/edit.svg',
-                width: 32.h,
-                height: 32.h,
-              ),
-            ),
-          ),
+        MainIconButton(
+          svgPath: 'assets/Magicons/Outline/User Interface/edit.svg',
+          onTap: () {},
         )
       ],
     );
