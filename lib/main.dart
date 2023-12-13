@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'presentations/bloc/bloc_observer.dart';
-import 'presentations/screens/profile/account_section/detail_account.dart';
+import 'presentations/screens/profile/account_section/detail_account_screen.dart';
+import 'presentations/screens/profile/account_section/edit_account_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
               appBarTheme: const AppBarTheme(centerTitle: true),
               useMaterial3: true,
             ),
-            home: const DetailAccount(),
+            home: const EditAccountScreen(),
           );
         });
   }

@@ -6,8 +6,8 @@ import 'package:montra_ui/presentations/screens/profile/account_section/componen
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
-class DetailAccount extends StatelessWidget {
-  const DetailAccount({super.key});
+class DetailAccountScreen extends StatelessWidget {
+  const DetailAccountScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

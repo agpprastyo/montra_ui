@@ -6,11 +6,13 @@ import 'package:montra_ui/presentations/styles/app_color.dart';
 class MainIconButton extends StatelessWidget {
   final String svgPath;
   final VoidCallback? onTap;
+  final Color? svgColor;
 
   const MainIconButton({
     super.key,
     required this.svgPath,
     this.onTap,
+    this.svgColor,
   });
 
   @override
@@ -28,6 +30,12 @@ class MainIconButton extends StatelessWidget {
             svgPath,
             width: 32.h,
             height: 32.h,
+            colorFilter: svgColor != null
+                ? ColorFilter.mode(
+                    svgColor!,
+                    BlendMode.srcIn,
+                  )
+                : null,
           ),
         ),
       ),
