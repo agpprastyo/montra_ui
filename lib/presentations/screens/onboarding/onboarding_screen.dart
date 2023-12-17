@@ -5,8 +5,6 @@ import 'package:montra_ui/presentations/bloc/image_slider/image_slider_cubit.dar
 import 'package:montra_ui/presentations/components/image_slider.dart';
 import 'package:montra_ui/presentations/components/main_button.dart';
 import 'package:montra_ui/presentations/routes/route.dart';
-import 'package:montra_ui/presentations/screens/auth/sign_in/sign_in_screen.dart';
-import 'package:montra_ui/presentations/screens/auth/sign_up/sign_up_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

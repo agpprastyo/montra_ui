@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:montra_ui/presentations/components/main_button.dart';
 import 'package:montra_ui/presentations/components/main_text_field.dart';
 import 'package:montra_ui/presentations/routes/route.dart';
-import 'package:montra_ui/presentations/screens/auth/forgot_password/forgot_password.dart';
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 

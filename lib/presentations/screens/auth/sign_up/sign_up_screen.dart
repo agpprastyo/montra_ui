@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:montra_ui/presentations/components/main_button.dart';
 import 'package:montra_ui/presentations/components/main_text_field.dart';
-import 'package:montra_ui/presentations/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:montra_ui/presentations/screens/auth/sign_up/components/term_conditions.dart';
 import 'package:montra_ui/presentations/screens/auth/verification/verification_screen.dart';
 import 'package:montra_ui/presentations/styles/app_color.dart';
