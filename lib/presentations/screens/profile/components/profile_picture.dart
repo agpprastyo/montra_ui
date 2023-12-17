@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:montra_ui/data/models/user.dart';
+import 'package:montra_ui/data/repository/user_repository.dart';
 import 'package:montra_ui/presentations/components/main_icon_button.dart';
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';

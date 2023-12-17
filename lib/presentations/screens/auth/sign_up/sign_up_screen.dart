@@ -8,6 +8,8 @@ import 'package:montra_ui/presentations/screens/auth/verification/verification_s
 import 'package:montra_ui/presentations/styles/app_color.dart';
 import 'package:montra_ui/presentations/styles/app_text_styles.dart';
 
+import '../../../routes/route.dart';
+
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
@@ -87,10 +89,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                const SignInScreen(),
-                          ));
+                          AppRoute.signIn.push(context);
                         },
                         child: Text(
                           'Login',

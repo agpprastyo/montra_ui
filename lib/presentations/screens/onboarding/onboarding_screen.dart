@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:montra_ui/presentations/bloc/image_slider/image_slider_cubit.dart';
 import 'package:montra_ui/presentations/components/image_slider.dart';
 import 'package:montra_ui/presentations/components/main_button.dart';
+import 'package:montra_ui/presentations/routes/route.dart';
 import 'package:montra_ui/presentations/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:montra_ui/presentations/screens/auth/sign_up/sign_up_screen.dart';
 
@@ -48,12 +49,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         setState(() {
                           _isLoading = false;
                         });
-
-                        // Navigate to SignUpScreen
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const SignUpScreen(),
-                        ));
+                        AppRoute.signUp.push(context);
                       });
                     },
                   ),
@@ -61,19 +57,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     type: ButtonType.secondary,
                     text: "Login",
                     onPressed: () {
-                      // Delay execution for 3 seconds
-                      Future.delayed(const Duration(seconds: 1), () {
-                        // Set isLoading to false after 3 seconds
-                        setState(() {
-                          _isLoading = false;
-                        });
-
-                        // Navigate to SignUpScreen
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const SignInScreen(),
-                        ));
-                      });
+                      AppRoute.signIn.push(context);
                     },
                   ),
                 ],
