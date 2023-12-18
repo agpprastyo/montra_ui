@@ -50,9 +50,9 @@ class HomeScreen extends StatelessWidget {
                 SafeArea(
                     child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.h),
-                  child: Column(
+                  child: const Column(
                     children: [
-                      const BuildHomeAppBar(),
+                      BuildHomeAppBar(),
                       IncomeExpenseBox(),
                     ],
                   ),
@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 8.h),
               child: Text(
                 'Spend Frequency',
-                style: AppTextStyles().titleTitle3,
+                style: const AppTextStyles().titleTitle3,
               ),
             )
           ],

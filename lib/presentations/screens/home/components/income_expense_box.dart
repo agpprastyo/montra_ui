@@ -71,13 +71,13 @@ class IncomeExpenseBox extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: AppTextStyles().bodyBody3.copyWith(color: Colors.white),
+                style: const AppTextStyles().bodyBody3.copyWith(color: Colors.white),
               ),
               SizedBox(height: 6.h),
               Text(
                 subtitle,
                 style:
-                    AppTextStyles().titleTitle3.copyWith(color: Colors.white),
+                    const AppTextStyles().titleTitle3.copyWith(color: Colors.white),
               ),
             ],
           )

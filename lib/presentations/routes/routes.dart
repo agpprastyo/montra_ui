@@ -64,9 +64,9 @@ CustomTransitionPage<void> customUpTransitionPage(GoRouterState state, child) {
     child: child,
     transitionDuration: const Duration(milliseconds: 3000),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      final begin = const Offset(0.0, 1.0);
-      final end = Offset.zero;
-      final curve = Curves.ease;
+      const begin = Offset(0.0, 1.0);
+      const end = Offset.zero;
+      const curve = Curves.ease;
       final tween =
       Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
       return SlideTransition(
